@@ -1,0 +1,27 @@
+@* showproductsInCategory Template File *@
+@(products: List[Product])
+
+@main("Products in a category"){
+<br>
+<br>
+<div class="col-md-6">
+<small>Products in a category</small>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>category name</th>
+            <th>Products in a category</th>
+          </tr>
+        </thead>
+        <tbody>
+        @for(product <- products){
+          <tr>
+            <td>@product.getCategory().getCategoryname()</td>
+            <td>@product.getProductname()</td>
+          </tr>
+      }
+        </tbody>
+      </table>
+</div>
+}

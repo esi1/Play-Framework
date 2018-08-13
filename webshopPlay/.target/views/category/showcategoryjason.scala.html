@@ -1,0 +1,43 @@
+@* showcategoryjason Template File *@
+@(message: String)
+
+@main("Welcome to myproducts") {
+
+	
+    <ul id="products"></ul>
+    
+    <hr>
+    
+    
+    
+    <script>
+        function loadListOfProducts(){
+            $('#products').empty();
+            
+            $.get('/products', function(products){
+                $.each(products, function(arrayIndex, product){
+                    $('<li>')
+                    .append(product.description)
+                    .append(', ')
+                    .append(product.name)
+                    .append(' (')
+                    .append(product.id)
+                    .append(')')
+                    .append(' ')
+                    .append(
+                    		 $('<button>')
+                             .text('GET')
+                             .click(function(){
+                                 location.href = "/products/" + product.id;
+                             })
+                    )
+                    
+                    .appendTo('#products');
+                });
+            });
+        }
+
+        $(loadListOfProducts);
+        </script>
+
+}

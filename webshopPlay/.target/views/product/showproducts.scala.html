@@ -1,0 +1,32 @@
+@* showproducts Template File *@
+@(products: List[models.Product])
+
+@main("Details for products"){
+<br>
+<br>
+<br>
+<div class="col-md-6">
+<small>Details for products</small>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            
+            <th>Product name</th>
+            <th>Description</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+        @for(product <- products) {
+          <tr>  
+            <td>@product.getProductname()</td>
+            <td>@product.getDescription()</td>
+            <td>@product.getCost()</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+ </div>
+ }
+ 

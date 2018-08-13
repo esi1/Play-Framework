@@ -1,0 +1,25 @@
+@* showCategory Template File *@
+@(category: Category)
+@main("Details for categories"){
+	<br>
+<br>	
+<div class="col-md-4">
+<small>Details for one category</small>
+<table class="table table-striped" >
+        <thead>
+          <tr>
+            <th>Id</i></th>
+            <th>Category name </th>
+          </tr>
+        </thead>
+        <tbody>
+       
+          <tr>
+            <td>@category.getId()</td>
+            <td>@category.getCategoryname()</td>
+          </tr>
+          
+        </tbody>
+      </table>
+      </div>
+	}

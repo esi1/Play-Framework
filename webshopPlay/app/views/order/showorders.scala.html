@@ -1,0 +1,37 @@
+@* showorders Template File *@
+@(orders: List[Order])
+
+
+@main("show  order"){
+<br>
+<br>
+
+
+<div class="col-md-6">
+<small>Details for orders</small>
+<table class="table table-striped" >
+        <thead>
+          <tr>
+            
+            <th>Order id </th>
+            <th>User name</th>
+            <th>Quantity</th>
+            <th>Products</th>
+          </tr>
+        </thead>
+        <tbody>
+        @for(order <- orders){
+          <tr>
+            <td>@order.getId()</td>
+            @if(order.getUser()!=null){
+            <td>@order.getUser().getFirstname()</td>
+            }
+            <td>@order.getQuantity()</td>
+            <td> @order.getProducts()</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+      </div>
+
+}

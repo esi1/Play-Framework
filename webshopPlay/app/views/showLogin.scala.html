@@ -1,0 +1,76 @@
+@* showLogin Template File *@
+@()
+
+
+<div>
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Webbshopp</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="@routes.CategoryController.showCategories">Categories list</a></li> 
+        <li class="active"><a href="@routes.CategoryController.showCategory(2)">Category list</a></li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Order <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="@routes.OrderController.showOrders">Show order</a></li>
+            <li><a href="@routes.OrderController.createOrderForm">Create order</a></li>
+          </ul>
+        </li>
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Product <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="@routes.ProductController.showProducts">Show all products</a></li>
+            <li><a href="@routes.ProductController.showProductsInCategory">Show all products in a category</a></li>
+          </ul>
+        </li>
+          
+       <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Create <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+          <li><a href="@routes.ProductController.createProductForm()">Create product</a></li>
+        <li><a href="@routes.CategoryController.createCategoryForm()">Create Category</a></li>
+          	
+          </ul>
+        </li>
+        <li ><a class="navbar-brand" href="@routes.UserController.showUsers()" >user's list</a></li>
+        
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+          <li><a href="@routes.StaffController.loginAdministratorForm()">Admin login</a></li>
+        <li><a href="@routes.StaffController.logout()">Admin logout</a></li>
+          </ul>
+        </li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+          <li><a href="@routes.UserController.loginUserForm()">User login</a></li>
+        <li><a href="@routes.UserController.logout()">User logout</a></li>
+          </ul>
+        </li>
+        <li ><a class="navbar-brand" href="@routes.UserController.createUserForm()" >New customer create account here</a></li>
+        <li class="active"><a class="navbar-brand" >@session.get("username")</a></li>
+        
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+</div>

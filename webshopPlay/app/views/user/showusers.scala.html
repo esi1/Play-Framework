@@ -1,0 +1,33 @@
+@* showusers Template File *@
+@(users: List[User])
+
+
+@main("User create form"){
+<br>
+<br>
+<div class="col-md-8">
+<small>Details for users</small>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+        @for(user <- users){
+          <tr>
+            <td>@user.getId()</td>
+            <td>@user.getFirstname()</td>
+            <td>@user.getLastname()</td>
+            <td>@user.getEmail()</td>
+          </tr>
+         
+          }
+        </tbody>
+      </table>
+</div>
+}

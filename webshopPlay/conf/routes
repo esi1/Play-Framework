@@ -1,0 +1,40 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                          		controllers.Application.index()
+
+#Staff
+GET    /showAdminLogin            		controllers.StaffController.loginAdministratorForm()
+POST   /checkInAdmin             		controllers.StaffController.loginAdministrator()
+POST    /checkout           				controllers.StaffController.logout()
+
+#User
+GET     /user/showLoginForm             controllers.UserController.loginUserForm()
+POST    /checkInuser            		controllers.UserController.loginUser()
+POST    	/user/checkout           		controllers.UserController.logout()
+GET     /user/showUserForm              controllers.UserController.createUserForm()
+POST    /user/showUserForm              controllers.UserController.createUser()
+GET     /user/showUser                  controllers.UserController.showUsers()
+
+#Product
+GET     /product/showProductForm              controllers.ProductController.createProductForm()
+POST    /product/showProductForm              controllers.ProductController.createProduct()
+GET     /product/showProduct                  controllers.ProductController.showProducts()
+GET     /product/showProductInCategory        controllers.ProductController.showProductsInCategory()
+
+#Category
+GET     /category/showCategoryForm              controllers.CategoryController.createCategoryForm()
+POST    /category/showCategoryForm              controllers.CategoryController.createCategory()
+GET     /category/showCategory                  controllers.CategoryController.showCategories()
+GET     /category/showCategory/:id                  controllers.CategoryController.showCategory(id: Int)
+
+#Order
+GET     /order/showOrderForm             controllers.OrderController.createOrderForm()
+POST    /order/showOrderForm             controllers.OrderController.createOrder()
+GET     /order/showOrder                 controllers.OrderController.showOrders()
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

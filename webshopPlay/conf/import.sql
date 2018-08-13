@@ -1,0 +1,24 @@
+INSERT INTO Category (categoryname) VALUES ('Animals');
+INSERT INTO Category (categoryname) VALUES ('Bikes');
+INSERT INTO Category (categoryname) VALUES ('Books');
+INSERT INTO Category (categoryname) VALUES ('Cars');
+INSERT INTO Category (categoryname) VALUES ('Clocks');
+INSERT INTO Category (categoryname) VALUES ('Food');
+INSERT INTO Category (categoryname) VALUES ('Mobiles');
+#INSERT INTO Category (categoryname) VALUES ('Mobiles');
+#INSERT INTO Category (categoryname) VALUES ('Mobiles');
+#INSERT INTO Category (categoryname) VALUES ('Mobiles');
+
+INSERT INTO Product (productname, description, cost, rrp, category_id) VALUES ('BMW', 'Made in Germany',1200 ,1000, 4);
+INSERT INTO Product (productname, description, cost, rrp, category_id) VALUES ('Resguide', 'Travel in Germany',100 ,50, 3);
+INSERT INTO Product (productname, description, cost, rrp, category_id) VALUES ('Sony', 'Made in Japan',12 ,10, 7);
+INSERT INTO Product (productname, description, cost, rrp, category_id) VALUES ('Cresent', 'made in SWE',12 ,10, 2);
+INSERT INTO Product (productname, description, cost, rrp, category_id) VALUES ('Travel in China', 'Chinas history',12 ,10, 3);
+INSERT INTO Product (productname, description, cost, rrp, category_id) VALUES ('Volvo', 'Made in SWE',12 ,10, 4);
+INSERT INTO Product (productname, description, cost, rrp, category_id) VALUES ('Samsung', 'Made in Corea',12 ,10, 7);
+#INSERT INTO Product (productname, description, cost, rrp, category_id) VALUES ('Dogs', 'A dog life',12 ,10, 3);
+INSERT INTO Staff (firstname, lastname, phonenumber, email, password) VALUES ('Bjorn','Goransson','08-123456','admin@gmail.com','hello');
+INSERT INTO User (password, firstname, lastname, streetaddress, phonenumber, email, city, postcode) VALUES ('pass','Ahmad','Karlsson', 'useraddress','08-123456','user@gmail.com','city','17245');
+INSERT INTO User (password, firstname, lastname, streetaddress, phonenumber, email, city, postcode) VALUES ('hello','Jim','Jasson', 'useraddress','08-123456','admin@gmail.com','city','17245');
+#INSERT INTO Cart (quantity, product_id, user_id) VALUES (2,1,1);
+#INSERT INTO Order (quantity, user_id) VALUES (2,1);
